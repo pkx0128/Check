@@ -21,9 +21,10 @@ func checkData(ip : String) {
             let isp = str!["data"]!!["isp"] as! String
             let region = str!["data"]!!["region"] as! String
             //对话框显示查询结果
+            print(country)
             let al = UIAlertView();
             al.title = "IP查询结果";
-            al.message = "IP地址："+ip+"\n"+"国家："+country+"\n"+"省份："+region+"\n"+"城市："+city+"\n"+"运营商：中国"+isp;
+            al.message = "IP地址："+ip+"\n"+"国家："+country+"\n"+"省份："+region+"\n"+"城市："+city+"\n"+"运营商："+isp;
             al.addButtonWithTitle("OK")
             al.show();
             

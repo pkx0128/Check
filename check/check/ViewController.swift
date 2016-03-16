@@ -17,7 +17,7 @@ class ViewController: UIViewController,UIAlertViewDelegate {
         let ip = input_IP.text
          if ip != ""{
          checkData(ip!);
-            print(ip);
+            //print(ip);
         }else{
             let alc = UIAlertView();
             alc.message = "请输入合法的IP地址！";
