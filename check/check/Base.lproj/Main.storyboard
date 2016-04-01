@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,65 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入需要查询的IP地址！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-6s-HIJ">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Mk5-5X-2wI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Mk5-5X-2wI"/>
-                                    </mask>
-                                </variation>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dHu-tk-63F">
+                                <rect key="frame" x="0.0" y="8" width="400" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入需要查询的IP地址！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-6s-HIJ">
+                                        <rect key="frame" x="20" y="20" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Mk5-5X-2wI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Mk5-5X-2wI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Mk5-5X-2wI"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-cu-KAl">
+                                        <rect key="frame" x="350" y="20" width="30" height="30"/>
+                                        <state key="normal" title="查询"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="220" y="0.0" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lM1-y0-8te"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="28" width="97" height="30"/>
-                                    <mask key="constraints">
-                                        <include reference="Mk5-5X-2wI"/>
-                                    </mask>
+                                    <rect key="frame" x="0.0" y="28" width="250" height="30"/>
                                 </variation>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-cu-KAl">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="查询"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="289" y="28" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lM1-y0-8te"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ov2-cu-KAl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8o8-Rk-d0T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ov2-cu-KAl" secondAttribute="trailing" id="Dfk-Cc-8Ud"/>
-                            <constraint firstItem="MkN-6s-HIJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Nlm-aB-HlC"/>
-                            <constraint firstItem="MkN-6s-HIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tHH-wM-4pp"/>
+                            <constraint firstItem="dHu-tk-63F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rrI-gT-Ctr"/>
+                            <constraint firstItem="dHu-tk-63F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vMv-3k-KQ2"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="MkN-6s-HIJ"/>
-                                <exclude reference="ov2-cu-KAl"/>
-                            </mask>
                             <mask key="constraints">
-                                <exclude reference="Nlm-aB-HlC"/>
-                                <exclude reference="tHH-wM-4pp"/>
-                                <exclude reference="8o8-Rk-d0T"/>
-                                <exclude reference="Dfk-Cc-8Ud"/>
+                                <exclude reference="rrI-gT-Ctr"/>
+                                <exclude reference="vMv-3k-KQ2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="MkN-6s-HIJ"/>
-                                <include reference="ov2-cu-KAl"/>
-                            </mask>
                             <mask key="constraints">
-                                <include reference="Nlm-aB-HlC"/>
-                                <include reference="tHH-wM-4pp"/>
-                                <include reference="8o8-Rk-d0T"/>
-                                <include reference="Dfk-Cc-8Ud"/>
+                                <include reference="rrI-gT-Ctr"/>
+                                <include reference="vMv-3k-KQ2"/>
                             </mask>
                         </variation>
                     </view>
